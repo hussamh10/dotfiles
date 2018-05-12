@@ -11,18 +11,48 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/import
+~MSle0~/map
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:wq
-|2,0,1526156883,,"wq"
 :q
-|2,0,1526156700,,"q"
+|2,0,1526160774,,"q"
+:V
+|2,0,1526160770,,"V"
+:wq
+|2,0,1526160763,,"wq"
 :w
-|2,0,1525852357,,"w"
+|2,0,1526160740,,"w"
+:vV
+|2,0,1526160591,,"vV"
+:colorscheme
+|2,0,1526160589,,"colorscheme"
+:QQ
+|2,0,1526160504,,"QQ"
+:Q
+|2,0,1526160503,,"Q"
+:qq
+|2,0,1526159911,,"qq"
+:V!
+|2,0,1526159413,,"V!"
+:e ~/_vimrc
+|2,0,1526159364,,"e ~/_vimrc"
+:q!
+|2,0,1526159357,,"q!"
+:registers
+|2,0,1526159259,,"registers"
+:'<,'>
+|2,0,1526159195,,"'<,'>"
+:x
+|2,0,1526159121,,"x"
+:smap <C-c> <C-g>y :smap <C-x> <C-g>x :imap <C-v> <Esc>pi :smap <C-v> <C-g>p
+|2,0,1526158714,,"smap <C-c> <C-g>y :smap <C-x> <C-g>x :imap <C-v> <Esc>pi :smap <C-v> <C-g>p"
+:W
+|2,0,1526158610,,"W"
+:~/_vimrc
+|2,0,1526158566,,"~/_vimrc"
 :e fmodel_test.py
 |2,0,1525035562,,"e fmodel_test.py"
 :e
@@ -33,16 +63,14 @@ $
 |2,0,1524955674,,"w! fmodel_test.py"
 :w fmodel_test.py
 |2,0,1524955670,,"w fmodel_test.py"
-:Q
-|2,0,1524914088,,"Q"
-:q!
-|2,0,1524849555,,"q!"
 :e _vimrc
 |2,0,1524849541,,"e _vimrc"
 :e _viminfo
 |2,0,1524849539,,"e _viminfo"
 
 # Search String History (newest to oldest):
+?/map
+|2,1,1526160772,47,"map"
 ?/import
 |2,1,1526156881,47,"import"
 ?/gec
@@ -59,265 +87,366 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	(
-|3,0,0,0,1,0,1525035665,"("
-""1	LINE	0
+"0	LINE	0
+	nmap yw yiw
+|3,0,0,1,1,0,1526160723,"nmap yw yiw"
+"1	LINE	0
+	set shiftwidth=4et tabstop=4
 	
-|3,1,1,1,1,0,1525852244,""
+	nmap cw ciw
+	nmap dw diw
+	nmap yw yiw
+	
+	map <C-X> "+x
+	map <C-C> "+y
+	map <C-Q> "+gP
+	
+	command W w
+	command Q qa
+	command QQ q!
+	command V e ~/_vimrc
+	
+	syntax on
+	set guifont=Fira\ Mono
+	
+	if has("gui_running")
+		colorscheme murphy
+	endif
+|3,0,1,1,21,0,1526160714,"set shiftwidth=4et tabstop=4","","nmap cw ciw","nmap dw diw","nmap yw yiw","","map <C-X> \"+x","map <C-C> \"+y","map <C-Q> \"+gP","","command W w","command Q qa","command QQ q!","command V e ~/_vimrc","","syntax on","set guifont=Fira\\ Mono","","if has(\"gui_running\")","	colorscheme murphy","endif"
 "2	LINE	0
-	
-|3,0,2,1,1,0,1525852220,""
+	    set fuoptions=maxvert,maxhorz
+	    au GUIEnter * set fullscreen
+|3,0,2,1,2,0,1526160560,"    set fuoptions=maxvert,maxhorz","    au GUIEnter * set fullscreen"
 "3	LINE	0
 	
-|3,0,3,1,1,0,1525852220,""
+|3,0,3,1,1,0,1526160557,""
 "4	LINE	0
-	Q3) How did they perform sentiment analysis? 
-|3,0,4,1,1,0,1525852215,"Q3) How did they perform sentiment analysis? "
+	syntax on
+	set guifont=Fira\ Mono
+|3,0,4,1,2,0,1526160552,"syntax on","set guifont=Fira\\ Mono"
 "5	LINE	0
-	j
-|3,0,5,1,1,0,1525852210,"j"
+	if has("gui_running")
+	    set fuoptions=maxvert,maxhorz
+	    au GUIEnter * set fullscreen
+	endif
+	
+|3,0,5,1,5,0,1526160548,"if has(\"gui_running\")","    set fuoptions=maxvert,maxhorz","    au GUIEnter * set fullscreen","endif",""
 "6	LINE	0
-		
-|3,0,6,1,1,0,1525851994,"	"
+	command qq q!
+|3,0,6,1,1,0,1526159991,"command qq q!"
 "7	LINE	0
-	
-|3,0,7,1,1,0,1525851994,""
+	inor <C-V> <C-O>:set paste<CR><C-R>+<C-O>:set nopaste<CR>
+	vnor <C-V> :<C-U>set paste<CR>gvc<C-R>+<C-O>:set nopaste<CR><ESC>
+|3,0,7,1,2,0,1526159970,"inor <C-V> <C-O>:set paste<CR><C-R>+<C-O>:set nopaste<CR>","vnor <C-V> :<C-U>set paste<CR>gvc<C-R>+<C-O>:set nopaste<CR><ESC>"
 "8	LINE	0
-	
-|3,0,8,1,1,0,1525851993,""
+	> "+y inor <C-V> <C-O>:set paste<CR><C-R>+<C-O>:set nopaste<CR> vnor <C-V> :<C-U>set paste<CR>gvc<C-R>+<C-O>:set nopaste<CR><ESC>
+|3,0,8,1,1,0,1526159927,"> \"+y inor <C-V> <C-O>:set paste<CR><C-R>+<C-O>:set nopaste<CR> vnor <C-V> :<C-U>set paste<CR>gvc<C-R>+<C-O>:set nopaste<CR><ESC>"
 "9	LINE	0
-	Using crowd-sourcing to get sentiment annotat
-|3,0,9,1,1,0,1525851683,"Using crowd-sourcing to get sentiment annotat"
-"-	CHAR	0
-	 
-|3,0,36,0,1,0,1525852208," "
+	 Copy Paste
+|3,0,9,1,1,0,1526159921," Copy Paste"
+""-	CHAR	0
+	yiw
+|3,1,36,0,1,0,1526160736,"yiw"
 
 # File marks:
-'0  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,48,1,0,1526156884,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'1  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,49,1,0,1526156820,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'2  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,50,1,0,1526156813,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'3  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,51,1,0,1526156813,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'4  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,52,1,0,1526156790,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'5  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,53,1,0,1526156790,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'6  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,54,1,0,1526156790,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'7  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,55,1,0,1526156790,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'8  301  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,56,301,0,1526156761,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
-'9  301  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,57,301,0,1526156761,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
+'0  14  0  ~\_vimrc
+|4,48,14,0,1526160774,"~\\_vimrc"
+'1  1  0  ~\_vimrc
+|4,49,1,0,1526160763,"~\\_vimrc"
+'2  1  0  ~\_vimrc
+|4,50,1,0,1526160763,"~\\_vimrc"
+'3  10  7  ~\_vimrc
+|4,51,10,7,1526160741,"~\\_vimrc"
+'4  10  7  ~\_vimrc
+|4,52,10,7,1526160741,"~\\_vimrc"
+'5  10  7  ~\_vimrc
+|4,53,10,7,1526160741,"~\\_vimrc"
+'6  10  7  ~\_vimrc
+|4,54,10,7,1526160741,"~\\_vimrc"
+'7  27  1  ~\_vimrc
+|4,55,27,1,1526160597,"~\\_vimrc"
+'8  20  1  ~\_vimrc
+|4,56,20,1,1526160597,"~\\_vimrc"
+'9  27  1  ~\_vimrc
+|4,57,27,1,1526160597,"~\\_vimrc"
 
 # Jumplist (newest first):
--'  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,1,0,1526156884,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  8  40  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,8,40,1526156883,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  7  14  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,7,14,1526156882,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  5  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,5,0,1526156882,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  4  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,4,0,1526156881,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  3  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,3,0,1526156881,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  2  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,2,0,1526156881,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  301  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,301,0,1526156878,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,1,0,1526156820,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,1,0,1526156813,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,1,0,1526156790,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  301  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,301,0,1526156761,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  301  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,301,0,1526156761,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  301  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,301,0,1526156761,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  301  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,301,0,1526156761,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  1  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,1,0,1526156759,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  112  60  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,112,60,1526156756,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  112  60  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,112,60,1526156756,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  112  60  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,112,60,1526156756,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  112  60  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,112,60,1526156756,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  112  60  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,112,60,1526156756,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  7  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,7,0,1526156716,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  7  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,7,0,1526156716,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  7  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,7,0,1526156716,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  7  0  C:\Users\Hussam\Downloads\Code\get.py
-|4,39,7,0,1526156716,"C:\\Users\\Hussam\\Downloads\\Code\\get.py"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  1  0  C:\Users\Hussam\Downloads\Code\geckodriver.exe
-|4,39,1,0,1526156700,"C:\\Users\\Hussam\\Downloads\\Code\\geckodriver.exe"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
--'  31  0  C:\Users\Hussam\Desktop\nlp1.txt
-|4,39,31,0,1525852421,"C:\\Users\\Hussam\\Desktop\\nlp1.txt"
+-'  14  0  ~\_vimrc
+|4,39,14,0,1526160774,"~\\_vimrc"
+-'  13  0  ~\_vimrc
+|4,39,13,0,1526160774,"~\\_vimrc"
+-'  12  0  ~\_vimrc
+|4,39,12,0,1526160773,"~\\_vimrc"
+-'  10  1  ~\_vimrc
+|4,39,10,1,1526160773,"~\\_vimrc"
+-'  9  1  ~\_vimrc
+|4,39,9,1,1526160773,"~\\_vimrc"
+-'  8  1  ~\_vimrc
+|4,39,8,1,1526160773,"~\\_vimrc"
+-'  7  1  ~\_vimrc
+|4,39,7,1,1526160773,"~\\_vimrc"
+-'  6  1  ~\_vimrc
+|4,39,6,1,1526160772,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160772,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160763,"~\\_vimrc"
+-'  10  7  ~\_vimrc
+|4,39,10,7,1526160741,"~\\_vimrc"
+-'  10  7  ~\_vimrc
+|4,39,10,7,1526160741,"~\\_vimrc"
+-'  27  0  ~\_vimrc
+|4,39,27,0,1526160714,"~\\_vimrc"
+-'  27  0  ~\_vimrc
+|4,39,27,0,1526160714,"~\\_vimrc"
+-'  27  0  ~\_vimrc
+|4,39,27,0,1526160714,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160636,"~\\_vimrc"
+-'  20  1  ~\_vimrc
+|4,39,20,1,1526160597,"~\\_vimrc"
+-'  20  1  ~\_vimrc
+|4,39,20,1,1526160597,"~\\_vimrc"
+-'  20  1  ~\_vimrc
+|4,39,20,1,1526160597,"~\\_vimrc"
+-'  20  1  ~\_vimrc
+|4,39,20,1,1526160597,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160592,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160592,"~\\_vimrc"
+-'  20  20  ~\_vimrc
+|4,39,20,20,1526160582,"~\\_vimrc"
+-'  20  20  ~\_vimrc
+|4,39,20,20,1526160582,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160558,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160558,"~\\_vimrc"
+-'  18  0  ~\_vimrc
+|4,39,18,0,1526160557,"~\\_vimrc"
+-'  18  0  ~\_vimrc
+|4,39,18,0,1526160557,"~\\_vimrc"
+-'  18  0  ~\_vimrc
+|4,39,18,0,1526160557,"~\\_vimrc"
+-'  18  0  ~\_vimrc
+|4,39,18,0,1526160557,"~\\_vimrc"
+-'  18  0  ~\_vimrc
+|4,39,18,0,1526160557,"~\\_vimrc"
+-'  18  0  ~\_vimrc
+|4,39,18,0,1526160557,"~\\_vimrc"
+-'  3  0  ~\_vimrc
+|4,39,3,0,1526160548,"~\\_vimrc"
+-'  3  0  ~\_vimrc
+|4,39,3,0,1526160548,"~\\_vimrc"
+-'  3  0  ~\_vimrc
+|4,39,3,0,1526160548,"~\\_vimrc"
+-'  3  0  ~\_vimrc
+|4,39,3,0,1526160548,"~\\_vimrc"
+-'  3  0  ~\_vimrc
+|4,39,3,0,1526160548,"~\\_vimrc"
+-'  3  0  ~\_vimrc
+|4,39,3,0,1526160548,"~\\_vimrc"
+-'  4  0  ~\_vimrc
+|4,39,4,0,1526160544,"~\\_vimrc"
+-'  4  0  ~\_vimrc
+|4,39,4,0,1526160544,"~\\_vimrc"
+-'  4  0  ~\_vimrc
+|4,39,4,0,1526160544,"~\\_vimrc"
+-'  4  0  ~\_vimrc
+|4,39,4,0,1526160544,"~\\_vimrc"
+-'  4  0  ~\_vimrc
+|4,39,4,0,1526160544,"~\\_vimrc"
+-'  4  0  ~\_vimrc
+|4,39,4,0,1526160544,"~\\_vimrc"
+-'  31  3  ~\_vimrc
+|4,39,31,3,1526160492,"~\\_vimrc"
+-'  26  3  ~\_vimrc
+|4,39,26,3,1526160492,"~\\_vimrc"
+-'  31  3  ~\_vimrc
+|4,39,31,3,1526160492,"~\\_vimrc"
+-'  26  3  ~\_vimrc
+|4,39,26,3,1526160492,"~\\_vimrc"
+-'  31  3  ~\_vimrc
+|4,39,31,3,1526160492,"~\\_vimrc"
+-'  26  3  ~\_vimrc
+|4,39,26,3,1526160492,"~\\_vimrc"
+-'  26  3  ~\_vimrc
+|4,39,26,3,1526160492,"~\\_vimrc"
+-'  20  3  ~\_vimrc
+|4,39,20,3,1526160492,"~\\_vimrc"
+-'  20  3  ~\_vimrc
+|4,39,20,3,1526160492,"~\\_vimrc"
+-'  26  3  ~\_vimrc
+|4,39,26,3,1526160492,"~\\_vimrc"
+-'  26  3  ~\_vimrc
+|4,39,26,3,1526160492,"~\\_vimrc"
+-'  20  3  ~\_vimrc
+|4,39,20,3,1526160492,"~\\_vimrc"
+-'  20  3  ~\_vimrc
+|4,39,20,3,1526160492,"~\\_vimrc"
+-'  29  6  ~\_vimrc
+|4,39,29,6,1526160489,"~\\_vimrc"
+-'  24  6  ~\_vimrc
+|4,39,24,6,1526160489,"~\\_vimrc"
+-'  29  6  ~\_vimrc
+|4,39,29,6,1526160489,"~\\_vimrc"
+-'  24  6  ~\_vimrc
+|4,39,24,6,1526160489,"~\\_vimrc"
+-'  29  6  ~\_vimrc
+|4,39,29,6,1526160489,"~\\_vimrc"
+-'  24  6  ~\_vimrc
+|4,39,24,6,1526160489,"~\\_vimrc"
+-'  24  6  ~\_vimrc
+|4,39,24,6,1526160489,"~\\_vimrc"
+-'  18  6  ~\_vimrc
+|4,39,18,6,1526160489,"~\\_vimrc"
+-'  18  6  ~\_vimrc
+|4,39,18,6,1526160489,"~\\_vimrc"
+-'  24  6  ~\_vimrc
+|4,39,24,6,1526160489,"~\\_vimrc"
+-'  24  6  ~\_vimrc
+|4,39,24,6,1526160489,"~\\_vimrc"
+-'  18  6  ~\_vimrc
+|4,39,18,6,1526160489,"~\\_vimrc"
+-'  18  6  ~\_vimrc
+|4,39,18,6,1526160489,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160484,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160484,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160484,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160484,"~\\_vimrc"
+-'  20  0  ~\_vimrc
+|4,39,20,0,1526160477,"~\\_vimrc"
+-'  20  0  ~\_vimrc
+|4,39,20,0,1526160477,"~\\_vimrc"
+-'  20  0  ~\_vimrc
+|4,39,20,0,1526160477,"~\\_vimrc"
+-'  20  0  ~\_vimrc
+|4,39,20,0,1526160477,"~\\_vimrc"
+-'  28  0  ~\_vimrc
+|4,39,28,0,1526160472,"~\\_vimrc"
+-'  23  0  ~\_vimrc
+|4,39,23,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  28  0  ~\_vimrc
+|4,39,28,0,1526160472,"~\\_vimrc"
+-'  23  0  ~\_vimrc
+|4,39,23,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  28  0  ~\_vimrc
+|4,39,28,0,1526160472,"~\\_vimrc"
+-'  23  0  ~\_vimrc
+|4,39,23,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  23  0  ~\_vimrc
+|4,39,23,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  23  0  ~\_vimrc
+|4,39,23,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  23  0  ~\_vimrc
+|4,39,23,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  17  0  ~\_vimrc
+|4,39,17,0,1526160472,"~\\_vimrc"
+-'  1  0  ~\_vimrc
+|4,39,1,0,1526160467,"~\\_vimrc"
 
 # History of marks within files (newest to oldest):
+
+> ~\_vimrc
+	*	1526160774	0
+	"	14	0
+	^	4	1
+	.	4	0
+	+	27	11
+	+	27	0
+	+	27	12
+	+	27	0
+	+	27	9
+	+	27	19
+	+	27	0
+	+	27	13
+	+	27	0
+	+	27	13
+	+	1	0
+	+	27	13
+	+	27	0
+	+	27	11
+	+	27	0
+	+	1	0
+	+	27	0
+	+	27	7
+	+	27	0
+	+	1	0
+	+	27	0
+	+	27	80
+	+	27	15
+	+	27	1
+	+	27	0
+	+	27	21
+	+	27	5
+	+	27	0
+	+	27	9
+	+	27	0
+	+	27	14
+	+	27	0
+	+	27	100
+	+	27	144
+	+	27	0
+	+	27	2
+	+	27	0
+	+	28	0
+	+	29	0
+	+	30	0
+	+	31	0
+	+	28	3
+	+	29	3
+	+	30	0
+	+	31	0
+	+	1	0
+	+	27	0
+	+	1	0
+	+	27	0
+	+	1	0
+	+	27	0
+	+	27	1
+	+	27	0
+	+	1	0
+	+	27	0
+	+	4	15
+	+	10	0
+	+	9	5
+	+	10	5
+	+	9	7
+	+	10	7
+	+	4	0
+	a	15	0
+	m	16	0
+
+> ~\.gitconfig
+	*	1526158271	0
+	"	1	0
 
 > C:\Users\Hussam\Downloads\Code\get.py
 	*	1526156883	0
@@ -502,16 +631,6 @@ $
 	^	10	48
 	.	8	0
 	+	8	0
-
-> ~\_vimrc
-	*	1524955713	0
-	"	2	8
-	^	1	9
-	.	1	8
-	+	2	0
-	+	2	22
-	+	2	0
-	+	1	8
 
 > C:\Users\Hussam\Desktop\mode
 	*	1524955654	0
